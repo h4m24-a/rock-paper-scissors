@@ -41,13 +41,15 @@ const game = () => {
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt('Choose what to throw : Rock, Paper, Scissors').toLowerCase()
         const computerSelection = getComputerChoice();
-        playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
      }
 
      if (playerScore > compScore) {
         return 'You beat the computer! You are a genius'
+    } else if (playerScore === compScore) {
+        return 'It is a tie!'
      } else if (playerScore < compScore) {
-        return 'You got beat by the computer! You need to practice more'
+        return 'The computer beat you! You need to practice more'
      } else {
        return 'You tied with the computer'
      }
