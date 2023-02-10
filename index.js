@@ -1,4 +1,7 @@
-const computerPlay = () => {
+let playerScore = 0
+let compScore = 0
+
+const getComputerChoice = () => {
     const choices = ['rock', 'paper', 'scissors']
     const randomNum = Math.floor(Math.random() * 3)
     const compChoice = choices[randomNum]
@@ -26,3 +29,7 @@ const playRound =(playerSelection, computerSelection) => {
         return 'You won! Paper covers Rock'
     }
 }
+
+const playerSelection = 'rock';
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
