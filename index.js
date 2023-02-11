@@ -49,7 +49,7 @@ const game = () => {
     } else if (playerScore === compScore) {
         return 'It is a tie!'
      } else if (playerScore < compScore) {
-        return 'The computer beat you! You need to practice more'
+        return 'Result: The computer beat you! You need to practice more'
      } else {
        return 'You tied with the computer'
      }
