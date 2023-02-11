@@ -46,11 +46,11 @@ const game = () => {
 
      if (playerScore > compScore) {
         return 'You beat the computer! You are a genius'
-     } else if (playerScore < compScore) {
+      } else if (playerScore < compScore) {
         return 'The computer beat you! You need to practice more'
-     } else {
-       return 'It is a tie!'
-     }
+      } else {
+        return 'It is a tie!'
+      }
 }
 
 console.log(game())
