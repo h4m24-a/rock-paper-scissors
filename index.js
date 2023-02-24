@@ -30,7 +30,7 @@ function win(playerChoice, computerChoice) {
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convertToWord(playerChoice)} beats ${convertToWord(computerChoice)}. You win! 💥`;
 	playerChoice_div.classList.add('green-glow')
-	setTimeout(function() { playerChoice_div.classList.remove('green-glow') }, 300);
+	setTimeout(() => playerChoice_div.classList.remove('green-glow'), 300);
 }
 
 function lose(playerChoice, computerChoice) {
@@ -40,7 +40,7 @@ function lose(playerChoice, computerChoice) {
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convertToWord(playerChoice)} loses to ${convertToWord(computerChoice)}. You lost... 🤦‍♂️`;
 	playerChoice_div.classList.add('red-glow')
-	setTimeout(function() { playerChoice_div.classList.remove('red-glow') }, 300);
+	setTimeout(() => playerChoice_div.classList.remove('red-glow'), 300);
 }
 
 function draw(playerChoice, computerChoice) {
@@ -49,7 +49,7 @@ function draw(playerChoice, computerChoice) {
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convertToWord(playerChoice)} equals ${convertToWord(computerChoice)}. Its a draw! 🙃`;
 	playerChoice_div.classList.add('grey-glow')
-	setTimeout(function() { playerChoice_div.classList.remove('grey-glow') }, 300);
+	setTimeout(() => playerChoice_div.classList.remove('grey-glow'), 300);;
 }
 
 function game(playerChoice) {
@@ -68,24 +68,21 @@ function game(playerChoice) {
 		case 'rr':
 		case 'pp':
 		case 'ss':
-			draw(playerChoice, computerChoice);
+			draw(playerChoice, playerChoice);
 			break;
 	}
 }
 
 // Buttons
 function main() {
-	rock_div.addEventListener('click', function() {
-		game('r');
-	})
+	rock_div.addEventListener('click', () =>
+		game('r'));
 
-	paper_div.addEventListener('click', function() {
-		game('p');
-	})
+	paper_div.addEventListener('click', () =>
+		game('p'));
 
-	scissors_div.addEventListener('click', function() {
-		game('s');
-})
+	scissors_div.addEventListener('click', () =>
+		game('s'));
 }
 
 main()
@@ -100,25 +97,25 @@ main()
 // }
 
 // const playRound =(playerSelection, computerSelection) => {
-//     if (playerSelection === computerSelection ) {
+//     if (playerChoice === computerSelection ) {
 //         return `You tied! You both picked ${playerSelection}`   
-//     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+//     } else if (playerChoice === 'scissors' && computerSelection === 'rock') {
 //         //
-//     computerScore++
+//     
 //         return 'You lost! Rock crushes Scissors'
-//     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-//     playerScore++
+//     } else if (playerChoice === 'scissors' && computerSelection === 'paper') {
+//     
 //         return 'You won! Scissors cuts Paper'
-//     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-//     computerScore++
+//     } else if (playerChoice === 'rock' && computerSelection === 'paper') {
+//
 //         return 'You lost! Paper covers Rock'
-//     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+//     } else if (playerChoice === 'rock' && computerSelection === 'scissors') {
 //         return 'You won! Rock crushes Scissors'
-//     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-//     computerScore++
+//     } else if (playerChoice === 'paper' && computerSelection === 'scissors') {
+//
 //         return 'You lost! Scissors cuts Paper'
-//     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-//     playerScore++
+//     } else if (playerChoice === 'paper' && computerSelection === 'rock') {
+//
 //         return 'You won! Paper covers Rock'
 //     }
 // }
