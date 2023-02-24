@@ -84,12 +84,23 @@ header > h1 {
     background-color: #292123;
 }
 
-#action-message {
-    color: #d9138a;
+.button-container {
     text-align: center;
+}
+
+.restartbtn {
+    background-color: #d9138a;
+    color: black;
     font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 24px;
+    font-size: 21px;
     margin-top: 40px;
+    border: solid 2px black;
+    padding: 0 14px 0 14px;
+}
+
+.restartbtn:hover {
+    cursor: pointer;
+    background-color: rgb(240, 43, 92);
 }
 
 .green-glow {
