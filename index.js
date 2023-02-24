@@ -34,13 +34,13 @@ function win(playerChoice, computerChoice) {
 }
 
 function lose(playerChoice, computerChoice) {
-	const computerChoice_div = document.getElementById(computerChoice);
+	const playerChoice_div = document.getElementById(playerChoice);
 	computerScore++;
 	playerScore_span.innerHTML = playerScore;
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convertToWord(playerChoice)} loses to ${convertToWord(computerChoice)}. You lost... 🤦‍♂️`;
-	computerChoice_div.classList.add('red-glow')
-	setTimeout(function() { computerChoice_div.classList.remove('red-glow') }, 300);
+	playerChoice_div.classList.add('red-glow')
+	setTimeout(function() { playerChoice_div.classList.remove('red-glow') }, 300);
 }
 
 function draw(playerChoice, computerChoice) {
