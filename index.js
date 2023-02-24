@@ -16,11 +16,18 @@ function getComputerChoice() {
 	return choices[randomNumber];
 }
 
+//Converting the letters to words
+function convertToWord(letter) {
+	if (letter === 'r') return 'Rock';
+	if (letter === 'p') return 'Paper';
+	return 'Scissors';
+}
+
 function win(playerChoice, computerChoice) {
 	playerScore++;
 	playerScore_span.innerHTML = playerScore;
 	computerScore_span.innerHTML = computerScore;
-	result_p.innerHTML = playerChoice + ' beats ' + computerChoice + '. You win! 🤯'
+	result_p.innerHTML = `${convertToWord(playerChoice)} beats ${convertToWord(computerChoice)}. You win! 💥`;
 }
 function lose() {
 	console.log('lose!')
