@@ -24,23 +24,32 @@ function convertToWord(letter) {
 }
 
 function win(playerChoice, computerChoice) {
+	const playerChoice_div = document.getElementById(playerChoice);
 	playerScore++;
 	playerScore_span.innerHTML = playerScore;
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convertToWord(playerChoice)} beats ${convertToWord(computerChoice)}. You win! 💥`;
+	playerChoice_div.classList.add('green-glow')
+	setTimeout(function() { playerChoice_div.classList.remove('green-glow') }, 300);
 }
 
 function lose(playerChoice, computerChoice) {
+	const computerChoice_div = document.getElementById(computerChoice);
 	computerScore++;
 	playerScore_span.innerHTML = playerScore;
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convertToWord(playerChoice)} loses to ${convertToWord(computerChoice)}. You lost... 🤦‍♂️`;
+	computerChoice_div.classList.add('red-glow')
+	setTimeout(function() { computerChoice_div.classList.remove('red-glow') }, 300);
 }
 
 function draw(playerChoice, computerChoice) {
+	const playerChoice_div = document.getElementById(playerChoice);
 	playerScore_span.innerHTML = playerScore;
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convertToWord(playerChoice)} equals ${convertToWord(computerChoice)}. Its a draw! 🙃`;
+	playerChoice_div.classList.add('grey-glow')
+	setTimeout(function() { playerChoice_div.classList.remove('grey-glow') }, 300);
 }
 
 function game(playerChoice) {
