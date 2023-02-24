@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +12,21 @@ body {
 header {
     background: #12a4d9;
     padding: 20px;
+}
+
+.green-glow {
+    border: 4px solid #4dcc7d;
+    box-shadow: 0 0 0 10px #31b43a;
+}
+
+.red-glow {
+    border: 4px solid #fc121b;
+    box-shadow: 0 0 0 10px #d01115;
+}
+
+.grey-glow {
+    border: 4px solid #464647;
+    box-shadow: 0 0 0 10px #25292b;
 }
 
 header > h1 {
