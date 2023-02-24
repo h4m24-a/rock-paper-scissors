@@ -29,11 +29,19 @@ function win(playerChoice, computerChoice) {
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convertToWord(playerChoice)} beats ${convertToWord(computerChoice)}. You win! 💥`;
 }
-function lose() {
-	console.log('lose!')
+
+function lose(playerChoice, computerChoice) {
+	computerScore++;
+	playerScore_span.innerHTML = playerScore;
+	computerScore_span.innerHTML = computerScore;
+	result_p.innerHTML = `${convertToWord(playerChoice)} loses to ${convertToWord(computerChoice)}. You lost... 🤦‍♂️`;
 }
+
 function draw() {
-	console.log('draw!')
+	playerScore++;
+	playerScore_span.innerHTML = playerScore;
+	computerScore_span.innerHTML = computerScore;
+	result_p.innerHTML = `${convertToWord(playerChoice)} beats ${convertToWord(computerChoice)}. You win! 💥`;
 }
 
 function game(playerChoice) {
