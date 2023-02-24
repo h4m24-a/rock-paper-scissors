@@ -1,5 +1,13 @@
-let playerScore = 0
-let compScore = 0
+//DOM elements
+const playerScore = 0;
+const computerScore = 0;
+const playerScore_span = document.getElementById('player-score');
+const computerScore_span = document.getElementById('computer-score');
+const scoreBoard_div = document.querySelector('.score-board');
+const result_div = document.querySelector('.result');
+const rock_div = document.getElementById('r');
+const paper_div = document.getElementById('p');
+const scissors_div = document.getElementById('s');
 
 const getComputerChoice = () => {
     const choices = ['rock', 'paper', 'scissors']
@@ -13,18 +21,18 @@ const playRound =(playerSelection, computerSelection) => {
         return `You tied! You both picked ${playerSelection}`   
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         //
-    compScore++
+    computerScore++
         return 'You lost! Rock crushes Scissors'
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
     playerScore++
         return 'You won! Scissors cuts Paper'
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-    compScore++
+    computerScore++
         return 'You lost! Paper covers Rock'
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         return 'You won! Rock crushes Scissors'
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-    compScore++
+    computerScore++
         return 'You lost! Scissors cuts Paper'
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
     playerScore++
@@ -40,9 +48,9 @@ const game = () => {
         console.log(playRound(playerSelection, computerSelection));
      }
 
-     if (playerScore > compScore) {
+     if (playerScore > computerScore) {
         return 'You beat the computer! You are a genius'
-      } else if (playerScore < compScore) {
+      } else if (playerScore < computerScore) {
         return 'The computer beat you! You need to practice more'
       } else {
         return 'It is a tie!'
