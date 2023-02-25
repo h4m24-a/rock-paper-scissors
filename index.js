@@ -8,7 +8,7 @@ const result_p = document.querySelector('.result > p');
 const rock_div = document.getElementById('r');
 const paper_div = document.getElementById('p');
 const scissors_div = document.getElementById('s');
-const restart = document.getElementById('restart');
+
 
 
 function getComputerChoice() {
@@ -80,8 +80,10 @@ function game(playerChoice) {
 
 // Restart game function
 	function restartGame() {
-		playerScore_span.innerHTML = 0;
-		computerScore_span.innerHTML = 0;
+		playerScore = 0;
+		computerScore = 0;
+		playerScore_span.innerHTML = playerScore;
+		computerScore_span.innerHTML = computerScore;
 	}
 
 // Buttons
