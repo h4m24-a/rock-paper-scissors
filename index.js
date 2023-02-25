@@ -33,7 +33,7 @@ function win(playerChoice, computerChoice) {
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convertToWord(playerChoice)} beats ${convertToWord(computerChoice)}. You win! 💥`;
 	playerChoice_div.classList.add('green-glow')
-	setTimeout(() => playerChoice_div.classList.remove('green-glow'), 300);
+	setTimeout(() => playerChoice_div.classList.remove('green-glow'), 500);
 }
 
 function lose(playerChoice, computerChoice) {
@@ -43,7 +43,7 @@ function lose(playerChoice, computerChoice) {
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convertToWord(playerChoice)} loses to ${convertToWord(computerChoice)}. You lost... 🤦‍♂️`;
 	playerChoice_div.classList.add('red-glow')
-	setTimeout(() => playerChoice_div.classList.remove('red-glow'), 300);
+	setTimeout(() => playerChoice_div.classList.remove('red-glow'), 500);
 }
 
 function draw(playerChoice, computerChoice) {
@@ -52,7 +52,7 @@ function draw(playerChoice, computerChoice) {
 	computerScore_span.innerHTML = computerScore;
 	result_p.innerHTML = `${convertToWord(playerChoice)} equals ${convertToWord(computerChoice)}. Its a draw! 🙃`;
 	playerChoice_div.classList.add('grey-glow')
-	setTimeout(() => playerChoice_div.classList.remove('grey-glow'), 300);;
+	setTimeout(() => playerChoice_div.classList.remove('grey-glow'), 500);;
 }
 
 
