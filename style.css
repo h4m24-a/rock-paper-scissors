@@ -21,7 +21,7 @@ header > h1 {
 }
 
 .score-board {
-    border: 3px solid white;
+    border: 3px solid #2DE969;
     width: 250px;
     margin: 20px auto;
     color: white;
@@ -93,7 +93,7 @@ header > h1 {
     background-color: #d9138a;
     color: black;
     font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 21px;
+    font-size: 20px;
     margin-top: 40px;
     border: solid 2px black;
     padding: 0 14px 0 14px;
