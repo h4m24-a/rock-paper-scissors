@@ -84,6 +84,7 @@ function game(playerChoice) {
 		computerScore = 0;
 		playerScore_span.innerHTML = playerScore;
 		computerScore_span.innerHTML = computerScore;
+		result_p.innerText = 'Make your move!';
 	}
 
 // Buttons
