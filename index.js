@@ -1,4 +1,4 @@
-//DOM elements
+// DOM elements
 let playerScore = 0;
 let computerScore = 0;
 const playerScore_span = document.getElementById('player-score');
@@ -8,6 +8,7 @@ const result_p = document.querySelector('.result > p');
 const rock_div = document.getElementById('r');
 const paper_div = document.getElementById('p');
 const scissors_div = document.getElementById('s');
+const restart = document.getElementById('restart');
 
 
 function getComputerChoice() {
@@ -16,13 +17,15 @@ function getComputerChoice() {
 	return choices[randomNumber];
 }
 
-//Converting the letters to words
+// Converting the letters to words
 function convertToWord(letter) {
 	if (letter === 'r') return 'Rock';
 	if (letter === 'p') return 'Paper';
 	return 'Scissors';
 }
 
+
+// Result function text and border colour
 function win(playerChoice, computerChoice) {
 	const playerChoice_div = document.getElementById(playerChoice);
 	playerScore++;
@@ -52,6 +55,8 @@ function draw(playerChoice, computerChoice) {
 	setTimeout(() => playerChoice_div.classList.remove('grey-glow'), 300);;
 }
 
+
+// Choices
 function game(playerChoice) {
 	const computerChoice = getComputerChoice();
 	switch (playerChoice + computerChoice) {
@@ -73,6 +78,12 @@ function game(playerChoice) {
 	}
 }
 
+// Restart game function
+	function restartGame() {
+		playerScore_span.innerHTML = 0;
+		computerScore_span.innerHTML = 0;
+	}
+
 // Buttons
 function main() {
 	rock_div.addEventListener('click', () =>
@@ -83,6 +94,8 @@ function main() {
 
 	scissors_div.addEventListener('click', () =>
 		game('s'));
+
+	restart.addEventListener('click', restartGame);
 }
 
 main()
