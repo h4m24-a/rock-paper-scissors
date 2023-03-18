@@ -115,6 +115,161 @@ header > h1 {
 }
 
 .grey-glow {
-    border: 4px solid #464647;
-    box-shadow: 0 0 0 10px #070808;
+    border: 4px solid #c04dee;
+    box-shadow: 0 0 0 10px #c04dee;
 }
+
+/* Mobile Responsive */
+@media screen and (max-width: 550px) {
+    header > h1 {
+        font-family: 'Poppins', Verdana, sans-serif;
+        color: black;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .score-board {
+        width: 200px;
+        margin: 20px auto;
+    }
+
+    .result {
+        font-size: 20px;
+        color: #e2d810;
+    }
+
+    .choices {
+        text-align: center;
+        margin-top: 10px;
+    
+    }
+    
+    .choice {
+        display: flex;
+        flex-direction: column;
+        border: 4px solid white;
+        border-radius: 4px;
+        padding: 5px;
+        margin: 20px 120px;
+    }
+
+    .choice img:first-child{
+        width: 150px;
+        height: auto;
+    }
+
+    .restartbtn {
+        font-size: 20px;
+        margin-top: 0px;
+        border: solid 2px black;
+        padding: 0 14px 0 14px;
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    header > h1 {
+        font-size: 24px;
+    }
+
+    .score-board {
+        width: 200px;
+        margin: 20px auto;
+    }
+
+    .badge {
+        font-size: 16px;
+    }
+
+    #computer-label {
+        position: absolute;
+        top: 33px;
+        right: -76px;
+    }
+
+    .result {
+        font-size: 20px;
+        color: #e2d810;
+    }
+
+    .choices {
+        text-align: center;
+        margin-top: 10px;
+    
+    }
+    
+    .choice {
+        display: flex;
+        flex-direction: column;
+        border: 4px solid white;
+        border-radius: 4px;
+        padding: 5px;
+        margin: 15px 125px;
+    }
+
+    .choice img:first-child{
+        width: 135px;
+        height: auto;
+    }
+
+    .restartbtn {
+        font-size: 18px;
+        margin-top: 5px;
+        border: solid 2px black;
+        padding: 0 14px 0 14px;
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+    header > h1 {
+        font-size: 24px;
+    }
+
+    .score-board {
+        width: 200px;
+        margin: 20px auto;
+    }
+
+    .badge {
+        font-size: 16px;
+    }
+
+    #computer-label {
+        position: absolute;
+        top: 33px;
+        right: -76px;
+    }
+
+    .result {
+        font-size: 20px;
+        color: #e2d810;
+    }
+
+    .choices {
+        text-align: center;
+        margin-top: 10px;
+    
+    }
+    
+    .choice {
+        display: flex;
+        flex-direction: column;
+        border: 4px solid white;
+        border-radius: 4px;
+        padding: 5px;
+        margin: 15px 130px;
+    }
+
+    .choice img:first-child{
+        width: 90px;
+        height: auto;
+    }
+
+    .restartbtn {
+        font-size: 16px;
+        margin-top: 0px;
+        border: solid 2px black;
+        padding: 0 14px 0 14px;
+    }
+}
+
